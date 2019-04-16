@@ -1,0 +1,121 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul, nav { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration: none; }
+
+/* ==|== Styles ===============================================================
+   Author: Nathan Gordon @gordonnl http://cinemont.com
+   ========================================================================== */
+
+/* ==|== Typography ========================================================= */
+
+@font-face {
+    font-family: 'pablo-icons';
+    src:url('../font/pablo.eot');
+    src:url('../font/pablo.eot?#iefix') format('embedded-opentype'),
+        url('../font/pablo.woff') format('woff'),
+        url('../font/pablo.ttf') format('truetype'),
+        url('../font/pablo.svg#pablo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titilliumbold_upright';
+    src: url('../font/titillium-boldupright-webfont.eot');
+    src: url('../font/titillium-boldupright-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/titillium-boldupright-webfont.woff2') format('woff2'),
+         url('../font/titillium-boldupright-webfont.woff') format('woff'),
+         url('../font/titillium-boldupright-webfont.ttf') format('truetype'),
+         url('../font/titillium-boldupright-webfont.svg#titilliumbold_upright') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.icons { font-family: 'pablo-icons'; speak: none; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; }
+
+/* ==|== Common ========================================================= */
+
+html { height: 100%; }
+body { height: 100%; font-family: 'titilliumbold_upright', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; background: radial-gradient(ellipse at 50% 30%,  #f1cf98 1%,#e6aa3e 70%); overflow: hidden;}
+.dg.ac { text-transform: none; }
+
+* { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); }
+
+/* ==|== Loader ========================================================= */
+
+.loading { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); text-align: center; }
+.loading .mask { overflow: hidden; }
+.intro-logo { width: 170px; display: block; }
+.egg { display: block; width: 100px; margin: -10px auto 0; transform: translateY(10px) rotate(-1deg) scaleY(0.98); -webkit-transform: translateY(10px) rotate(-1deg) scaleY(0.98); transform-origin: 50% 100%; -webkit-transform-origin: 50% 100%; }
+.egg-shadow { display: block; position: relative; width: 100px; margin: 0 auto; z-index: -1; opacity: 0.8; transform: scale(0.9); -webkit-transform: scale(0.9); }
+.loader { width: 20px; margin: 10px auto 0; }
+.load-progress { position: relative; color: #fff; font-size: 11px; letter-spacing: 0.05em; margin: 10px 0 0 25px; text-align: left;}
+.load-progress .red { position: absolute; width: 0px; white-space: nowrap; overflow: hidden; top: 0; left: -1px; color: #cd2c24; padding-left: 1px;}
+.load-mobile-prompt { display: none; }
+.mobile .load-mobile-prompt { display: none; color: #fff; font-size: 11px; letter-spacing: 0.08em; margin: 10px auto 0; }
+
+
+/* ==|== Nav =========================================================== */
+
+nav { position: absolute; left: 30px; top: 70%; margin-top: -90px; }
+nav .prompt { display: block; color: rgba(66, 47, 11, 1); position: relative; margin: 30px 0; cursor: pointer; transform: scale(0); -webkit-transform: scale(0); }
+nav .prompt .button { width: 30px; height: 30px; line-height: 30px; text-align: center; border: 1px solid rgba(66, 47, 11, 1); border-radius: 1000px; font-size: 18px; background: rgba(75, 52, 10, 0.1); }
+nav .prompt .label { position: absolute; left: 100%; top: 11px; color: rgba(66, 47, 11, 1); font-size: 10px; white-space: nowrap; margin: 0 10px; display: none; }
+nav .prompt.hover .button { background: rgba(75, 52, 10, 0.2); }
+nav .prompt.hover .label { display: block; }
+nav .prompt.active .button { background: #328c91; border-color: #328c91; color: #fff; }
+nav .prompt.active .label { color: #fff; }
+nav .share-prompt { position: relative; }
+nav .network { display: none; position: absolute; top: 0; left: 0; width: 32px; height: 32px; line-height: 32px; text-align: center; border-radius: 1000px; font-size: 18px; background: #70521a; color: #e6ac41; }
+nav .facebook { left: 84px; }
+nav .twitter { left: 42px; }
+.desktop nav .facebook:hover { background: #3c5a98; color: #fff; }
+.desktop nav .twitter:hover { background: #35beeb; color: #fff; }
+
+nav .mute-prompt .button { font-size: 17px; }
+nav .share-prompt .button { position: relative; width: 29px; padding-left: 1px; height: 29px; padding-top: 1px; }
+nav .adopt-prompt .button { width: 29px; padding-left: 1px; font-size: 20px; }
+nav .mute-prompt.active .button { font-size: 14px; }
+nav .share-prompt.active .label { display: none; }
+.logo { display: none; position: absolute; left: 80%; top: 65%; width: 140px; margin: -50px -70px; }
+
+.mobile nav .prompt { margin: 20px 0; }
+.mobile .logo { width: 170px; margin: -50px -85px; }
+
+/* ==|== 3D ============================================================ */
+
+.pablo {  }
+
+/* ==|== Music ========================================================= */
+
+#ytplayer { position: absolute; right: 100%; top: 0; }
+.mobile #ytplayer { position: absolute; left: 0; top: 0; height: 100%; width: 100%; right: 0; bottom: 0; z-index: 1; opacity: 0; }
+
+/* ==|== Physics ======================================================= */
+
+.debug { display: none; position: absolute; top: 0; left: 0; width: 250px; }
+
+
+
+
+
